@@ -1,0 +1,63 @@
+
+$padding-grid-x : 15px;
+$column-max : 12;
+
+$containers-max-width : (
+  XXL: 1320px,
+  XL : 1010px,
+  LG : 960px,
+  MD: 720px,
+  SM: 720px,
+  XS: 540px
+) !default;
+
+
+.container-fluid {
+  width: 100%;
+  padding-right: $padding-grid-x;
+  padding-left: $padding-grid-x;
+  margin-right: auto;
+  margin-left: auto;
+}
+.container {
+  width: 100%;
+  padding-right: $padding-grid-x;
+  padding-left: $padding-grid-x;
+  margin-right: auto;
+  margin-left: auto;
+  @each $name, $value in $containers-max-width {
+    @include Responsive($name){
+      max-width: $value;
+    }
+  }
+}
+
+.row{
+  margin-right: 0 - $padding-grid-x;
+  margin-left: 0 - $padding-grid-x;
+
+  @include clearfix();
+}
+
+@for $i from 1 through $column-max {
+  .col-#{$i} {
+    width: (100% * $i) / $column-max;
+    padding-right: $padding-grid-x;
+    padding-left: $padding-grid-x;
+    float: left;
+  }
+  @each $name, $value in $containers-max-width {
+    .col-#{to-lower-case(#{$name})}-#{$i} {
+      @include Responsive($name){
+        width: (100% * $i) / $column-max;
+        padding-right: $padding-grid-x;
+        padding-left: $padding-grid-x;
+        float: left; 
+      }
+    }
+  }
+}
+
+
+
+

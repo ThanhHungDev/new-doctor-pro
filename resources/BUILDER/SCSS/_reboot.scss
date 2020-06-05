@@ -1,0 +1,432 @@
+/*
+Author: TRƯƠNG THANH HÙNG
+Author URI: https://www.facebook.com/HungSmurf
+Version: 1.0
+Description: .
+*/
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+:focus {
+  outline: 0 !important;
+  text-decoration: none !important;
+}
+
+// Body
+//
+// 1. Remove the margin in all browsers.
+// 2. As a best practice, apply a default `background-color`.
+// 3. Prevent adjustments of font size after orientation changes in iOS.
+// 4. Change the default tap highlight to be completely transparent in iOS.
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0; // 1
+  padding: 0;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  color: $body-color;
+  background-color: $body-bg; 
+  line-height: $line-height-base;
+}
+%tag-default{
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+
+// Typography
+//
+// 1. Remove top margins from headings
+//    By default, `<h1>`-`<h6>` all receive top and bottom margins. We nuke the top
+//    margin for easier control within type scales as it avoids margin collapsing.
+
+%heading {
+  margin-top: 0; // 1
+  margin-bottom: 0;
+}
+
+h1 {
+  @extend %heading;
+  font-size: $h1-font-size;
+}
+
+h2 {
+  @extend %heading;
+  font-size: $h2-font-size;
+}
+
+h3 {
+  @extend %heading;
+  font-size: $h3-font-size;
+}
+
+h4 {
+  @extend %heading;
+  font-size: $h4-font-size;
+}
+
+h5 {
+  @extend %heading;
+  font-size: $h5-font-size;
+}
+
+h6 {
+  @extend %heading;
+  font-size: $h6-font-size;
+}
+
+
+
+// Reset margins on paragraphs
+//
+// Similarly, the top margin on `<p>`s get reset. However, we also reset the
+// bottom margin to use `rem` units instead of `em`.
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+// Lists
+
+ol,
+ul {
+  padding-left: 2rem;
+  list-style: none;
+}
+
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+main,
+time {
+  display: block;
+}
+
+// Links
+
+
+
+a {
+  color: $link-color;
+  text-decoration: $link-decoration;
+
+  &:hover,
+  &:active {
+    background-color: transparent;
+    color: $link-hover-color;
+    text-decoration: none;
+  }
+  &:not([href]) {
+    &,
+    &:hover {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+}
+
+
+// Images and content
+img{
+  vertical-align: middle;
+  border: none;
+  max-width: 100%;
+  height: auto;
+}
+
+.float-left {
+  float: left !important;
+}
+
+.float-right {
+  float: right !important;
+}
+
+.float-none {
+  float: none !important;
+}
+
+.mobile {
+  display: none;
+  @include Responsive(SM) {
+
+    display: block;
+	}
+}
+.pc {
+  display: block;
+  @include Responsive(SM) {
+
+    display: none;
+	}
+}
+.md-d-block {
+  display: block;
+  @include Responsive(MD) {
+
+    display: none;
+	}
+}
+
+
+.small {
+  display: none;
+  @include Responsive(XS) {
+    
+    display: block;
+	}
+}
+/* Clearfix
+-----------------------------------------*/
+.clear {
+  
+  @include clearfix()
+}
+
+.line-height-0{
+  line-height: 0;
+}
+
+/**
+* display
+*/
+.d-none {
+  display: none !important;
+}
+
+.d-inline {
+  display: inline !important;
+}
+.d-inline-block {
+  display: inline-block !important;
+}
+.d-block {
+  display: block !important;
+}
+.d-table {
+  display: table !important;
+}
+.d-table-row {
+  display: table-row !important;
+}
+.d-table-cell {
+  display: table-cell !important;
+}
+.d-flex {
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.d-inline-flex {
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+}
+
+.position-relative {
+  position: relative;
+}
+
+
+.italic {
+	font-style: italic!important
+}
+
+.not-italic {
+	font-style: normal!important
+}
+
+.uppercase {
+	text-transform: uppercase!important
+}
+
+.lowercase {
+	text-transform: lowercase!important
+}
+
+.capitalize {
+	text-transform: capitalize!important
+}
+
+.normal-case {
+	text-transform: none!important
+}
+
+.underline {
+	text-decoration: underline!important
+}
+
+.line-through {
+	text-decoration: line-through!important
+}
+
+.no-underline {
+	text-decoration: none!important
+}
+
+/**************************************************/
+
+.font-hairline {
+	font-weight: 100!important
+}
+
+.font-thin {
+	font-weight: 200!important
+}
+
+.font-light {
+	font-weight: 300!important
+}
+
+.font-normal {
+	font-weight: 400!important
+}
+
+.font-medium {
+	font-weight: 500!important
+}
+
+.font-semibold {
+	font-weight: 600!important
+}
+
+.font-bold {
+	font-weight: 700!important
+}
+
+.font-extrabold {
+	font-weight: 800!important
+}
+
+.font-black {
+	font-weight: 900!important
+}
+//// text aline 
+.text-center{
+	text-align: center;
+}
+.text-right{
+	text-align: right;
+}
+.text-left{
+	text-align: left;
+}
+
+
+
+//// margin AUTO  
+.vertical-align-middle{
+	vertical-align: middle;
+}
+.mg-auto{
+	margin-left: auto;
+	margin-right: auto
+}
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+.border {
+  border: 1px solid #dee2e6!important;
+}
+.border-top {
+  border-top: 1px solid #dee2e6!important;
+}
+.border-right {
+  border-right: 1px solid #dee2e6!important;
+}
+.border-bottom {
+  border-bottom: 1px solid #dee2e6!important;
+}
+.border-left {
+  border-left: 1px solid #dee2e6!important;
+}
+
+@each $name, $color in $custom-colors {
+  .text-color-#{""+$name} {
+    color: $color;
+  }
+}
+@each $name, $color in $custom-colors {
+  
+  .border-color-#{""+$name} {
+    border-color: $color;
+  }
+}
+@each $name, $color in $custom-colors {
+  
+  .bg-color-#{""+$name} {
+    background-color: $color;
+  }
+}
+
+@each $width in $custom-width {
+  .w-#{$width} {
+    width: $width;
+  }
+}
+
+@each $name, $font-size in $custom-font-size {
+  .text-#{""+$name} {
+    font-size: $font-size
+  }
+}
+
+
+////// icon font awesome
+.svg-inline--fa {
+  display: inline-block;
+  font-size: inherit;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+
+  &.fa-w-16 {
+    width: 1em;
+  }
+  &.fa-w-10 {
+    width: 0.8em;
+  }
+}
+
+body.neo-scroll {
+  overflow: hidden;
+}

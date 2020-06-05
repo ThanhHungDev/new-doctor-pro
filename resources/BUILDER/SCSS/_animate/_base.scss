@@ -1,0 +1,47 @@
+.animated {
+  animation-duration: #{$--animate-duration};
+  animation-fill-mode: both;
+  
+  &.infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+  }
+
+  &.faster {
+    animation-duration: $--animate-duration / 2;
+  }
+  &.fast {
+    animation-duration: $--animate-duration * 0.8;
+  }
+  &.slow {
+    animation-duration: $--animate-duration * 2;
+  }
+  &.slower {
+    animation-duration: $--animate-duration * 3;
+  }
+  @for $i from 1 to 5 {
+    &.loop-#{$i} {
+      animation-iteration-count: $--animate-loop * $i;
+    }
+    &.delay-1s {
+      animation-delay: $--animate-delay * $i; 
+    }
+  }
+}
+
+
+@media print, (prefers-reduced-motion: reduce) {
+  .animated {
+    animation-duration: 1ms !important;
+    transition-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  .animated[class*='Out'] {
+    opacity: 0;
+  }
+}
+
+.animated-initial{
+  animation-name: initial!important;
+}

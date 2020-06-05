@@ -1,0 +1,138 @@
+
+
+@import '_animate/_vars.scss';
+@import '_animate/_base.scss';
+
+// /* Attention seekers  */
+// @import '_animate/attention_seekers/bounce.scss';
+// @import '_animate/attention_seekers/flash.scss';
+@import '_animate/attention_seekers/pulse.scss';
+// @import '_animate/attention_seekers/rubberBand.scss';
+// @import '_animate/attention_seekers/shakeX.scss';
+// @import '_animate/attention_seekers/shakeY.scss';
+// @import '_animate/attention_seekers/headShake.scss';
+// @import '_animate/attention_seekers/swing.scss';
+@import '_animate/attention_seekers/tada.scss';
+// @import '_animate/attention_seekers/wobble.scss';
+// @import '_animate/attention_seekers/jello.scss';
+// @import '_animate/attention_seekers/heartBeat.scss';
+
+// /* Back entrances */
+// @import '_animate/back_entrances/backInDown.scss';
+// @import '_animate/back_entrances/backInLeft.scss';
+// @import '_animate/back_entrances/backInRight.scss';
+// @import '_animate/back_entrances/backInUp.scss';
+
+// /* Back exists */
+// @import '_animate/back_exits/backOutDown.scss';
+// @import '_animate/back_exits/backOutLeft.scss';
+// @import '_animate/back_exits/backOutRight.scss';
+// @import '_animate/back_exits/backOutUp.scss';
+
+// /* Bouncing entrances  */
+// @import '_animate/bouncing_entrances/bounceIn.scss';
+// @import '_animate/bouncing_entrances/bounceInDown.scss';
+// @import '_animate/bouncing_entrances/bounceInLeft.scss';
+// @import '_animate/bouncing_entrances/bounceInRight.scss';
+// @import '_animate/bouncing_entrances/bounceInUp.scss';
+
+// /* Bouncing exits  */
+// @import '_animate/bouncing_exits/bounceOut.scss';
+// @import '_animate/bouncing_exits/bounceOutDown.scss';
+// @import '_animate/bouncing_exits/bounceOutLeft.scss';
+// @import '_animate/bouncing_exits/bounceOutRight.scss';
+// @import '_animate/bouncing_exits/bounceOutUp.scss';
+
+// /* Fading entrances  */
+@import '_animate/fading_entrances/fadeIn.scss';
+// @import '_animate/fading_entrances/fadeInDown.scss';
+// @import '_animate/fading_entrances/fadeInDownBig.scss';
+@import '_animate/fading_entrances/fadeInLeft.scss';
+// @import '_animate/fading_entrances/fadeInLeftBig.scss';
+@import '_animate/fading_entrances/fadeInRight.scss';
+// @import '_animate/fading_entrances/fadeInRightBig.scss';
+@import '_animate/fading_entrances/fadeInUp.scss';
+// @import '_animate/fading_entrances/fadeInUpBig.scss';
+// @import '_animate/fading_entrances/fadeInTopLeft.scss';
+// @import '_animate/fading_entrances/fadeInTopRight.scss';
+// @import '_animate/fading_entrances/fadeInBottomLeft.scss';
+// @import '_animate/fading_entrances/fadeInBottomRight.scss';
+
+// /* Fading exits */
+// @import '_animate/fading_exits/fadeOut.scss';
+// @import '_animate/fading_exits/fadeOutDown.scss';
+// @import '_animate/fading_exits/fadeOutDownBig.scss';
+// @import '_animate/fading_exits/fadeOutLeft.scss';
+// @import '_animate/fading_exits/fadeOutLeftBig.scss';
+// @import '_animate/fading_exits/fadeOutRight.scss';
+// @import '_animate/fading_exits/fadeOutRightBig.scss';
+// @import '_animate/fading_exits/fadeOutUp.scss';
+// @import '_animate/fading_exits/fadeOutUpBig.scss';
+// @import '_animate/fading_exits/fadeOutTopLeft.scss';
+// @import '_animate/fading_exits/fadeOutTopRight.scss';
+// @import '_animate/fading_exits/fadeOutBottomRight.scss';
+// @import '_animate/fading_exits/fadeOutBottomLeft.scss';
+
+// /* Flippers */
+// @import '_animate/flippers/flip.scss';
+// @import '_animate/flippers/flipInX.scss';
+// @import '_animate/flippers/flipInY.scss';
+// @import '_animate/flippers/flipOutX.scss';
+// @import '_animate/flippers/flipOutY.scss';
+
+// /* Lightspeed */
+// @import '_animate/lightspeed/lightSpeedInRight.scss';
+// @import '_animate/lightspeed/lightSpeedInLeft.scss';
+// @import '_animate/lightspeed/lightSpeedOutRight.scss';
+// @import '_animate/lightspeed/lightSpeedOutLeft.scss';
+
+// /* Rotating entrances */
+// @import '_animate/rotating_entrances/rotateIn.scss';
+// @import '_animate/rotating_entrances/rotateInDownLeft.scss';
+// @import '_animate/rotating_entrances/rotateInDownRight.scss';
+// @import '_animate/rotating_entrances/rotateInUpLeft.scss';
+// @import '_animate/rotating_entrances/rotateInUpRight.scss';
+
+// /* Rotating exits */
+@import '_animate/rotating_exits/rotateOut.scss';
+// @import '_animate/rotating_exits/rotateOutDownLeft.scss';
+// @import '_animate/rotating_exits/rotateOutDownRight.scss';
+// @import '_animate/rotating_exits/rotateOutUpLeft.scss';
+// @import '_animate/rotating_exits/rotateOutUpRight.scss';
+@import '_animate/rotating_exits/rotateCircle.scss';
+
+// /* Specials */
+// @import '_animate/specials/hinge.scss';
+@import '_animate/specials/jackInTheBox.scss';
+@import '_animate/specials/rollIn.scss';
+// @import '_animate/specials/rollOut.scss';
+
+// /* Zooming entrances */
+@import '_animate/zooming_entrances/zoomIn.scss';
+// @import '_animate/zooming_entrances/zoomInDown.scss';
+// @import '_animate/zooming_entrances/zoomInLeft.scss';
+// @import '_animate/zooming_entrances/zoomInRight.scss';
+// @import '_animate/zooming_entrances/zoomInUp.scss';
+
+// /* Zooming exits */
+// @import '_animate/zooming_exits/zoomOut.scss';
+// @import '_animate/zooming_exits/zoomOutDown.scss';
+// @import '_animate/zooming_exits/zoomOutLeft.scss';
+// @import '_animate/zooming_exits/zoomOutRight.scss';
+// @import '_animate/zooming_exits/zoomOutUp.scss';
+
+// /* Sliding entrances */
+@import '_animate/sliding_entrances/slideInDown.scss';
+// @import '_animate/sliding_entrances/slideInLeft.scss';
+// @import '_animate/sliding_entrances/slideInRight.scss';
+// @import '_animate/sliding_entrances/slideInUp.scss';
+
+// /* Sliding exits */
+// @import '_animate/sliding_exits/slideOutDown.scss';
+// @import '_animate/sliding_exits/slideOutLeft.scss';
+// @import '_animate/sliding_exits/slideOutRight.scss';
+// @import '_animate/sliding_exits/slideOutUp.scss';
+
+
+/// custom 
+@import '_animate/custom/float.scss';

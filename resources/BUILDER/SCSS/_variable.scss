@@ -1,0 +1,298 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// Color system
+
+@import "./mixin";
+
+$white: #fff !default;
+$black: #000 !default;
+
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+
+$blue  : #0d6efd !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink  : #d63384 !default;
+$red   : #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green : #28a745 !default;
+$teal  : #20c997 !default;
+$cyan  : #17a2b8 !default;
+
+
+
+
+
+$primary  : $blue !default;
+$secondary: $gray-600 !default;
+$success  : $green !default;
+$info     : $cyan !default;
+$warning  : $yellow !default;
+$danger   : $red !default;
+$light    : $gray-100 !default;
+$dark     : $gray-800 !default;
+
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+) !default;
+
+$body-bg:                   $white !default;
+$body-color:                $gray-900 !default;
+/// line height default
+
+$line-height-base:            1.3 !default;
+
+// Links
+$link-color:                              $teal !default;
+$link-decoration:                         none !default;
+$link-hover-color:                        darken($link-color, 15%) !default;
+
+
+// heading 
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+
+$h1-font-size:                $font-size-base * 2.5 !default;
+$h2-font-size:                $font-size-base * 2 !default;
+$h3-font-size:                $font-size-base * 1.75 !default;
+$h4-font-size:                $font-size-base * 1.5 !default;
+$h5-font-size:                $font-size-base * 1.25 !default;
+$h6-font-size:                $font-size-base !default;
+
+$font-size-sm:                $font-size-base * .875 !default;
+$font-size-lg:                $font-size-base * 1.25 !default;
+
+
+
+// Khai báo kích thước tương ứng với màn hình thiết bị
+   
+$XS : 575px;    /// <  576px 
+$SM : 768px;    // 576px -> 768px
+$MD : 991px;    /// 768px -> 991px
+$LG : 1199px;   /// 992px ----> 1199px
+$XL : 1320px ;  /// 1200px - 1320px 
+$XXL: 1500px;   /// > 1320px
+// media queries
+
+
+
+
+$colors: (
+  "blue":       $blue,
+  "indigo":     $indigo,
+  "purple":     $purple,
+  "pink":       $pink,
+  "red":        $red,
+  "orange":     $orange,
+  "yellow":     $yellow,
+  "green":      $green,
+  "teal":       $teal,
+  "cyan":       $cyan,
+  "white":      $white,
+  "gray":       $gray-600,
+  "gray-dark":  $gray-800
+) !default;
+
+
+$custom-red-light            : #f17067;
+$custom-red                  : #f44336;
+$custom-pink                 : #e91e63;
+$custom-purple               : #9c27b0;
+$custom-deep-purple          : #673ab7;
+$custom-indigo               : #3f51b5;
+$custom-blue                 : #2196f3;
+$custom-light-blue           : #03a9f4;
+$custom-cyan                 : #00bcd4;
+$custom-teal                 : #009688;
+$custom-green                : #4caf50;
+$custom-light-green          : #8bc34a;
+$custom-lime                 : #cddc39;
+$custom-yellow               : #ffeb3b;
+$custom-amber                : #ffc107;
+$custom-orange               : #ff9800;
+$custom-deep-orange          : #ff5722;
+$custom-brown                : #795548;
+$custom-black                : #000;
+$custom-white                : #fff;
+$custom-grey                 : #9e9e9e;
+$custom-blue-grey            : #607d8b;
+$custom-primary-color-dark   : #0d47a1;
+$custom-secondary-color      : #aa66cc;
+$custom-secondary-color-dark : #9933cc;
+$custom-default-color        : #2bbbad;
+$custom-default-color-dark   : #00695c;
+$custom-info-color           : #33b5e5;
+$custom-info-color-dark      : #0099cc;
+$custom-success-color        : #00c851;
+$custom-success-color-dark   : #007e33;
+$custom-warning-color        : #ffbb33;
+$custom-warning-color-dark   : #ff8800;
+$custom-danger-color         : #ff3547;
+$custom-danger-color-dark    : #cc0000;
+$custom-elegant-color        : #2e2e2e;
+$custom-elegant-color-dark   : #212121;
+$custom-stylish-color        : #4b515d;
+$custom-stylish-color-dark   : #3e4551;
+$custom-unique-color         : #3f729b;
+$custom-unique-color-dark    : #1c2331;
+$custom-special-color        : #37474f;
+$custom-special-color-dark   : #263238;
+$custom-primary              : #4285f4;
+$custom-danger               : #ff3547;
+$custom-warning              : #ffbb33;
+$custom-success              : #00c851;
+$custom-info                 : #33b5e5;
+$custom-default              : #2bbbad;
+$custom-secondary            : #aa66cc;
+$custom-dark                 : #212121;
+$custom-light                : #e0e0e0;
+$custom-grey-x               : #f9f9f9;
+
+
+
+$custom-colors : (
+  red                 : $custom-red,
+  pink                : $custom-pink,
+  purple              : $custom-purple,
+  deep-purple         : $custom-deep-purple,
+  indigo              : $custom-indigo,
+  blue                : $custom-blue,
+  light-blue          : $custom-light-blue,
+  cyan                : $custom-cyan,
+  teal                : $custom-teal,
+  green               : $custom-green,
+  light-green         : $custom-light-green,
+  lime                : $custom-lime,
+  yellow              : $custom-yellow,
+  amber               : $custom-amber,
+  orange              : $custom-orange,
+  deep-orange         : $custom-deep-orange,
+  brown               : $custom-brown,
+  black               : $custom-black,
+  white               : $custom-white,
+  grey                : $custom-grey,
+  blue-grey           : $custom-blue-grey,
+  primary-color-dark  : $custom-primary-color-dark,
+  secondary-color     : $custom-secondary-color,
+  secondary-color-dark: $custom-secondary-color-dark,
+  default-color       : $custom-default-color,
+  default-color-dark  : $custom-default-color-dark,
+  info-color          : $custom-info-color,
+  info-color-dark     : $custom-info-color-dark,
+  success-color       : $custom-success-color,
+  success-color-dark  : $custom-success-color-dark,
+  warning-color       : $custom-warning-color,
+  warning-color-dark  : $custom-warning-color-dark,
+  danger-color        : $custom-danger-color,
+  danger-color-dark   : $custom-danger-color-dark,
+  elegant-color       : $custom-elegant-color,
+  elegant-color-dark  : $custom-elegant-color-dark,
+  stylish-color       : $custom-stylish-color,
+  stylish-color-dark  : $custom-stylish-color-dark,
+  unique-color        : $custom-unique-color,
+  unique-color-dark   : $custom-unique-color-dark,
+  special-color       : $custom-special-color,
+  special-color-dark  : $custom-special-color-dark,
+  primary             : $custom-primary,
+  danger              : $custom-danger,
+  warning             : $custom-warning,
+  success             : $custom-success,
+  info                : $custom-info,
+  default             : $custom-default,
+  secondary           : $custom-secondary,
+  dark                : $custom-dark,
+  light               : $custom-light,
+  grey-x              : $custom-grey-x,
+)!default;
+
+
+
+$custom-width : (
+  25,
+  50,
+  55,
+  60,
+  65,
+  70,
+  75,
+  80,
+  85,
+  90,
+  95,
+  100
+)!default;
+
+$custom-font-size : (
+  xs  : .75rem,
+  sm  : .875rem,
+  base: 1rem,
+  lg  : 1.125rem,
+  xl  : 1.25rem,
+  2xl : 1.5rem,
+  3xl : 1.875rem,
+  4xl : 2.25rem,
+  5xl : 3rem,
+  6xl : 4rem
+)!default;
+
+
+
+
+
+
+@font-face {
+  font-family: 'Great Vibes';
+  src: url('/font/Great_Vibes/GreatVibes-Regular.ttf');
+}
+// // Font Variables
+$font-logo-bak: 'Great Vibes';
+
+@font-face {
+  font-family: 'Muli';
+  src: url('/font/Muli/Muli-VariableFont_wght.ttf');
+}
+
+$font-logo : "Muli";
+
+
+
+@font-face {
+  font-family: 'Archivo-Medium';
+  src: url('/font/Archivo/Archivo-Medium.ttf');
+}
+$font-archivo-medium : "Archivo-Medium";
+
+@font-face {
+  font-family: 'BenchNine-Regular';
+  src: url('/font/BenchNine/BenchNine-Regular.ttf');
+}
+$font-benchNine-regular : "BenchNine-Regular";
+
+@font-face {
+  font-family: 'Sawarabi-Mincho-Regular';
+  src: url('/font/Sawarabi_Mincho/SawarabiMincho-Regular.ttf');
+}
+$font-sawarabi-mincho-regular : "Sawarabi-Mincho-Regular";
+
+/// font 
+$font-family-sans-serif:      Arial, Helvetica, sans-serif !default;
+$font-family-base:            "Times New Roman", Times, serif !default;

@@ -1,0 +1,58 @@
+@import "./mixin";
+
+
+
+.btn {
+
+  display: inline-block;
+  color: $body-color;
+  text-align: center;
+  text-decoration: null;
+  white-space: normal;
+  word-wrap: break-word;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: transparent;
+
+  padding: 0.7rem 1.5rem 0.6rem;
+  font-size: 0.81rem;
+  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  -o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  margin: 0.375rem;
+  border: 2px solid transparent;
+  -webkit-border-radius: 0.125rem;
+  border-radius: 0.125rem;
+
+  // @include btn-interaction(color-level($white, -8));
+
+    
+  //
+  // Alternate buttons
+  //
+
+  @each $color, $value in $theme-colors {
+    &.btn-#{$color} {
+      background-color: $value;
+      color: $white;
+      border: 2px solid $value;
+
+      @include btn-interaction($white, color-level($value, -8), $value)
+    }
+  }
+
+  @each $color, $value in $theme-colors {
+    &.btn-outline-#{$color} {
+      border: 2px solid $value !important;
+      background-color: transparent !important;
+      color: $value !important;
+      @include btn-interaction(color-level($value, -8), $white, $white)
+    }
+  }
+
+
+}
+

@@ -1,0 +1,71 @@
+@import "./mixin";
+
+
+
+
+// Gradients
+$gradients: () !default;
+$gradients: map-merge(
+  (
+    "purple": (
+      "start": #ff6ec4,
+      "end": #7873f5
+    ),
+    "peach": (
+      "start": #ffd86f,
+      "end": #fc6262
+    ),
+    "aqua": (
+      "start": #2096ff,
+      "end": #05ffa3
+    ),
+    "blue": (
+      "start": #45cafc,
+      "end": #303f9f
+    ),
+    "home-page": (
+      "start": #e1fefa,
+      "end": #fcf7f4
+    )
+  ),
+  $gradients
+);
+
+
+// Gradients RGBA Version
+$gradients-rgba: () !default;
+$gradients-rgba: map-merge(
+  (
+    "purple": (
+      "start": rgba(255, 110, 196, .9),
+      "end": rgba(120, 115, 245, .9)
+    ),
+    "peach": (
+      "start": rgba(255, 216, 111, .9),
+      "end": rgba(252, 98, 98, .9)
+    ),
+    "aqua": (
+      "start": rgba(32, 150, 255, .9),
+      "end": rgba(5, 255, 163, .9)
+    ),
+    "blue": (
+      "start": rgba(69, 202, 252, .9),
+      "end": rgba(48, 63, 159, .9)
+    ),
+  ),
+  $gradients-rgba
+);
+
+
+// Basic gradients
+@each $name, $val in $gradients {
+  @include make-gradient($name, $val);
+}
+@each $name, $val in $gradients-rgba {
+  @include make-gradient-rgba($name, $val);
+}
+// Basic gradients
+@each $name, $val in $gradients {
+  @include make-bg-gradient($name, $val);
+}
+

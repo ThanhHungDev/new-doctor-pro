@@ -1,0 +1,21 @@
+{
+	"save succcess": "save succcess",
+	"login success": "login successfull",
+	"User Id is required": "User Id is required",
+	"User Id is valid": "User Id is valid",
+	"Token Access is required": "Token Access is required",
+	"Email is required": "Email is required",
+	"Email is valid": "Email is valid",
+	"Password is required": "Password is required",
+	"Password is valid": "Password is valid",
+	"Head Phone is required": "Head Phone is required",
+	"Head Phone is valid": "Head Phone is valid",
+	"Phone is required": "Phone is required",
+	"Phone is valid": "Phone is valid",
+	"Detect format valid": "Detect format valid",
+	"userId is required": "userId is required",
+	"Access is valid": "Access is valid",
+	"get channel succcess": "get channel succcess",
+	"Refesh is valid": "Refesh is valid",
+	"refesh success": "refesh success"
+}

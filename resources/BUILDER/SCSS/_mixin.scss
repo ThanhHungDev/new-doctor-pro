@@ -1,0 +1,193 @@
+
+// Make gradient
+@mixin make-gradient($name, $value) {
+  .#{$name}-gradient {
+
+    background: -moz-linear-gradient(40deg, map-get($value, start), map-get($value, end)) !important;
+    background: -webkit-linear-gradient(40deg, map-get($value, start), map-get($value, end)) !important;
+    background: -o-linear-gradient(40deg, map-get($value, start), map-get($value, end)) !important;
+    background: -ms-linear-gradient(40deg, map-get($value, start), map-get($value, end)) !important;
+    background: linear-gradient(40deg, map-get($value, start), map-get($value, end)) !important;
+  }
+}
+
+// Make gradient
+@mixin make-gradient-rgba($name, $value) {
+  .#{$name}-gradient-rgba {
+    
+    background: -moz-linear-gradient(40deg, map-get($value, start), map-get($value, end)) !important;
+    background: -webkit-linear-gradient(40deg, map-get($value, start), map-get($value, end)) !important;
+    background: -o-linear-gradient(40deg, map-get($value, start), map-get($value, end)) !important;
+    background: -ms-linear-gradient(40deg, map-get($value, start), map-get($value, end)) !important;
+    background: linear-gradient(40deg, map-get($value, start), map-get($value, end)) !important;
+  }
+}
+
+// Make gradient
+@mixin make-bg-gradient($name, $value) {
+  .bg-gradient-#{$name} {
+
+    background: -moz-linear-gradient(131.93deg, map-get($value, start), map-get($value, end)) !important;
+    background: -webkit-linear-gradient(131.93deg, map-get($value, start), map-get($value, end)) !important;
+    background: -o-linear-gradient(131.93deg, map-get($value, start), map-get($value, end)) !important;
+    background: -ms-linear-gradient(131.93deg, map-get($value, start), map-get($value, end)) !important;
+    background: linear-gradient(131.93deg, map-get($value, start), map-get($value, end)) !important;
+  }
+}
+
+
+@mixin render-gradient($deg, $start, $end ){
+  background: -moz-linear-gradient($deg, $start, $end) !important;
+  background: -webkit-linear-gradient($deg, $start, $end) !important;
+  background: -o-linear-gradient($deg,$start, $end) !important;
+  background: -ms-linear-gradient($deg, $start, $end) !important;
+  background: linear-gradient($deg, $start, $end) !important;
+}
+
+
+@mixin Responsive($canvas) {
+  @if $canvas == XXL {
+    @media only screen and (max-width: $XXL) { @content; } 
+  } @else if $canvas == XL {
+    @media only screen and (max-width: $XL) { @content; } 
+  }@else if $canvas == LG {
+    @media only screen and (max-width: $LG) { @content; } 
+  }@else if $canvas == MD {
+    @media only screen and (max-width: $MD) { @content; } 
+  }@else if $canvas == SM {
+    @media only screen and (max-width: $SM) { @content; } 
+  }@else if $canvas == XS {
+    @media only screen and (max-width: $XS) { @content; } 
+  }
+}
+
+
+
+@mixin clearfix {
+  &:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    overflow: hidden;
+  }
+}
+
+
+//// progress mixin
+@mixin progress-loading($color) {
+  .progress-loadding{
+    background-color:$color;
+    &:before{
+      content:'';
+      position:absolute;
+      background-color:inherit;
+      top:0;
+      left:0;
+      bottom:0;
+      will-change:left, right;
+      -webkit-animation:indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+      animation:indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite
+    }
+
+    &:after{
+      content:'';
+      position:absolute;
+      background-color:inherit;
+      top:0;
+      left:0;
+      bottom:0;
+      will-change:left, right;
+      -webkit-animation:indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+      animation:indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+      -webkit-animation-delay:1.15s;
+      animation-delay:1.15s
+    }
+  }
+}
+
+@mixin render-transform($value){
+  -webkit-transform: $value;
+  -moz-transform: $value;
+  -o-transform: $value;
+  -ms-transform: $value;
+  transform: $value;
+}
+
+
+@mixin render-scroll-custom(){
+    scrollbar-color: rgba(0,0,0,.3) #F5F5F5;
+    scrollbar-width: thin !important;
+    -ms-overflow-style : none;
+
+    &::-webkit-scrollbar{
+      width: 6px;
+      background-color: #F5F5F5;
+    }
+    &::-webkit-scrollbar-thumb{
+      border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+      background-color: #555;
+    }
+
+    &::-moz-scrollbar{
+      width: 6px;
+      background-color: #F5F5F5;
+    }
+
+    &::-moz-scrollbar-thumb{
+      border-radius: 10px;
+      -moz-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+      background-color: #555;
+    }
+
+    &::-o-scrollbar{
+      width: 6px;
+      background-color: #F5F5F5;
+    }
+
+    &::-o-scrollbar-thumb{
+      border-radius: 10px;
+      -o-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+      background-color: #555;
+    }
+    &::-ms-scrollbar{
+      width: 6px;
+      background-color: #F5F5F5;
+    }
+
+    &::-ms-scrollbar-thumb{
+      border-radius: 10px;
+      -ms-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+      background-color: #555;
+    }
+}
+
+
+
+$btn-disabled-opacity:        .65 !default;
+@mixin btn-interaction($background, $border, $color) {
+  &:hover {
+    background-color: $background;
+    border: 2px solid $border;
+    color: $color;
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  &:focus,
+  &.focus {
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    outline: 0;
+  }
+
+  &:disabled,
+  &.disabled,
+  fieldset:disabled & { // stylelint-disable-line selector-no-qualifying-type
+    pointer-events: none;
+    opacity: $btn-disabled-opacity;
+  }
+}

@@ -1,0 +1,14 @@
+[req]
+default_bits = 2048
+prompt = no
+default_md = sha256
+distinguished_name = dn
+ 
+[dn]
+C=VN
+ST=HCM
+L=Q1
+O=HERO
+OU=HUNG
+emailAddress=thanhhung.code@gmail.com
+CN = localhost
